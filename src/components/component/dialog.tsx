@@ -86,7 +86,7 @@ const Dialog = ({ currentData, onClose, onSubmit }: DialogProps) => {
     const newErrors: Record<string, string> = {}; // Dynamic keys with string values
 
     if (!updatedData.rank || isNaN(updatedData.rank)) {
-      newErrors.rank = "Required | Should be a valid number";
+      newErrors.rank = "Required | Should be a number";
     }
 
     if (
@@ -95,11 +95,11 @@ const Dialog = ({ currentData, onClose, onSubmit }: DialogProps) => {
       updatedData.percentile < 0 ||
       updatedData.percentile > 100
     ) {
-      newErrors.percentile = "Percentile should be between 0 and 100";
+      newErrors.percentile = "Required | percentile 0-100";
     }
 
     if (updatedData.score === undefined || isNaN(updatedData.score)) {
-      newErrors.score = "Required | Should be a valid number";
+      newErrors.score = "Required | Should be a number between 0 and 15";
     }
 
     setErrors(newErrors);
