@@ -16,6 +16,7 @@ interface QuickStatsCardProps {
 
 const QuickStatsCard = ({ currentData, onUpdate }: QuickStatsCardProps) => {
   const [isDialogOpen, setIsDialogOpen] = useState<boolean>(false);
+  const [isMounted, setIsMounted] = useState(false);
 
   const handleUpdateClick = () => {
     setIsDialogOpen(true);

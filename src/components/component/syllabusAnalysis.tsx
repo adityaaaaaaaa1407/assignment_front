@@ -1,5 +1,3 @@
-"use client";
-
 const data = [
   {
     label: "HTML Tools, Forms, History",
